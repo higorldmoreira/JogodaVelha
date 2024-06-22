@@ -1,0 +1,149 @@
+/* Redefinindo o padding, margem e box-sizing para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral para o corpo da página */
+body {
+    background: #ffffff;
+    font-family: sans-serif;
+	background: url(/assets/img/bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Estilo para a barra de estatísticas */
+.stats {
+    width: 100%;
+    height: 100px;
+    background: rgb(0, 0, 0);
+	opacity: 85%;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 5px 5px 5px #0000006d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 150px;
+}
+
+/* Estilo para as estatísticas do usuário e do computador */
+.stats_user, .stats_computer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin: 0 20px;
+}
+
+/* Estilo para o nome do jogador */
+.player_name {
+	font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Estilo para a pontuação */
+.score {
+    font-size:40px;
+}
+
+/* Estilo para o tabuleiro */
+.board {
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 1;
+    background: rgb(0, 0, 0);
+    margin: 15px auto;
+    display: flex;
+    flex-flow: row wrap;
+    color: rgb(254, 254, 254);
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 10px rgb(0, 0, 0);
+}
+
+/* Estilo para cada casa do tabuleiro */
+.casa {
+    width: 33.33%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    border: 2px solid rgb(227, 227, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9em;
+    cursor: context-menu;
+    box-shadow: 0 0 50px rgba(16, 13, 13, 0.5);
+}
+
+/* Efeito de hover para as casas do tabuleiro */
+.casa:hover {
+    background: rgb(255, 255, 255);
+}
+
+/* Estilo para a tela de início */
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    border: 2px solid black;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px;
+    font-size: 2em;
+    color: white;
+}
+
+/* Estilo para os botões de início */
+.start span {
+    font-size: 2em;
+    margin: 0 20px;
+}
+
+/* Efeito de hover para os botões de início */
+.start span:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Estilo para a mensagem */
+.msg {
+    text-align: center;
+    color: rgb(0, 0, 0);
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 400px;
+    margin-top: 30px;
+}
+
+/* Media query para responsividade em telas menores */
+@media (max-width: 600px) {
+    .stats{
+		margin-bottom: 90px;
+	}
+	.score {
+        font-size: 1.5em;
+    }
+
+    .casa {
+        font-size: 2em;
+    }
+
+    .start {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .start span {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+}

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>Jogo da Velha</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class="stats">
+
+    <!-- Cabeçalho com as estatísticas de jogador e computador -->
+    <header class="stats">
         <div class="stats_user">
             <h3 class="player_name">Você</h3>
             <span class="score">0</span>
@@ -19,26 +32,38 @@
             <h3 class="player_name">Computador</h3>
             <span class="score">0</span>
         </div>
-    </div>
-    <br>
-    <div class="board">
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-    </div>
-    <h1 class="msg"></h1>
-    <div class="start">
-        <h3>Escolha X ou O</h3>
-        <br><br>
-        <span>X</span>
-        <span>O</span>
-    </div>
-    <script src='main.js'></script> 
+    </header>
+
+    <!-- Corpo principal com o tabuleiro e mensagens -->
+    <main>
+        <!-- Tabuleiro do jogo -->
+        <div class="board">
+            <!-- Casas do tabuleiro -->
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+            <div class="casa"></div>
+        </div>
+
+        <!-- Mensagem exibida durante o jogo -->
+        <h1 class="msg"></h1>
+
+        <!-- Opção de escolha X ou O -->
+        <div class="start">
+            <h3>Escolha X ou O</h3>
+            <br><br>
+            <span>X</span>
+            <span>O</span>
+        </div>
+    </main>
+
+    <!-- Script JavaScript para funcionalidades do jogo -->
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
